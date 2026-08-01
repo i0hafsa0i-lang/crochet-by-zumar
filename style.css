@@ -73,19 +73,14 @@ nav{
 /* Buttons */
 
 .btn{
-
+    display:inline-block;
     background:#7b2d26;
-
     color:white;
-
     padding:12px 24px;
-
     border-radius:8px;
-
     text-decoration:none;
-
     transition:.3s;
-
+    margin-top:20px;
 }
 
 .btn:hover{
@@ -299,4 +294,8 @@ header p{
 
     margin:15px 0;
 
+}
+.product-card p{
+    margin-bottom:15px;
+    line-height:1.6;
 }
