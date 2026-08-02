@@ -484,4 +484,21 @@ footer p{
 
 .review-card h4{
     color:#7b2d26;
+}/* Shop Header */
+
+.shop-header{
+    padding:80px 20px;
+    text-align:center;
+    background:#fdf8f4;
+}
+
+.shop-header h1{
+    font-size:52px;
+    color:#7b2d26;
+    margin-bottom:20px;
+}
+
+.shop-header p{
+    font-size:20px;
+    color:#666;
 }
