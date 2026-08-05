@@ -740,3 +740,24 @@ textarea{
 .cart-item p{
     margin:10px 0;
 }
+.nav-buttons{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.cart-btn{
+    background:white;
+    color:#7b2d26;
+    border:2px solid #7b2d26;
+    padding:12px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.cart-btn:hover{
+    background:#7b2d26;
+    color:white;
+}
