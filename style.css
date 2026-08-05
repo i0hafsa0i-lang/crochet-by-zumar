@@ -720,3 +720,23 @@ textarea{
     color:#7b2d26;
     box-shadow:0 8px 20px rgba(0,0,0,.06);
 }
+#cart-items{
+    max-width:900px;
+    margin:auto;
+}
+
+.cart-item{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.cart-item h3{
+    color:#7b2d26;
+}
+
+.cart-item p{
+    margin:10px 0;
+}
