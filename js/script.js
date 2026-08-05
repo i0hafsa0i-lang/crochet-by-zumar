@@ -104,3 +104,33 @@ document.addEventListener("click", function(e){
     }
 
 });
+// ===========================
+// WHATSAPP CHECKOUT
+// ===========================
+
+document.addEventListener("click", function(e){
+
+    if(e.target.id==="checkout-btn"){
+
+        let message = "Hello! I would like to order:%0A%0A";
+
+        let total = 0;
+
+        cart.forEach(product=>{
+
+            message += `• ${product.name} - Rs. ${product.price}%0A`;
+
+            total += product.price;
+
+        });
+
+        message += `%0A*Total: Rs. ${total}*`;
+
+        window.open(
+            `https://wa.me/923244691920?text=${message}`,
+            "_blank"
+        );
+
+    }
+
+});
