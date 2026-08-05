@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,120 +9,117 @@
 
 <body>
 
-    <!-- Navigation -->
+<nav>
 
-    <nav>
+    <div class="logo">
+        <img src="images/logo.png" alt="Crochet by Zumar Logo">
+        <span>Crochet by Zumar</span>
+    </div>
 
-        <div class="logo">
-            <img src="images/logo.png" alt="Crochet by Zumar Logo">
-            <span>Crochet by Zumar</span>
-        </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-       <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="support.html">Support</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
+    <div class="nav-buttons">
+        <a href="cart.html" class="cart-btn">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </a>
 
-        <div class="nav-buttons">
+        <a href="https://wa.me/923244691920" class="btn">
+            Order
+        </a>
+    </div>
 
-    <a href="cart.html" class="cart-btn">
-        🛒 Cart (<span id="cart-count">0</span>)
-    </a>
+</nav>
 
-    <a href="https://wa.me/923244691920" class="btn">
-        Order
-    </a>
+<section class="shop-header">
 
-</div>
+    <h1>Shop Our Collection</h1>
 
-    </nav>
+    <p>
+        Browse our handmade crochet products made with love and care.
+    </p>
 
-    <!-- Shop Header -->
+</section>
 
-    <section class="shop-header">
+<section class="products">
 
-        <h1>Shop Our Collection</h1>
+    <h2>All Products</h2>
 
-        <p>
-            Browse our handmade crochet products made with love and care.
-        </p>
+    <div class="product-grid">
 
-    </section>
+        <div class="product-card">
 
-    <!-- Products -->
+            <img src="images/rose-bag.png" alt="Crochet Rose Bag" class="product-image">
 
-    <section class="products">
+            <h3>Crochet Rose Bag</h3>
 
-        <h2>All Products</h2>
+            <p class="price">Rs. 2499</p>
 
-        <div class="product-grid">
+            <p>
+                A beautiful handmade crochet rose bag crafted with premium quality yarn.
+                Lightweight, stylish and perfect for daily use, gifting or special occasions.
+            </p>
 
-            <div class="product-card">
-
-                <img src="images/rose-bag.png" class="product-image" alt="Rose Bag">
-
-                <h3>Crochet Rose Bag</h3>
-
-                <p class="price">Rs. 2499</p>
-
-                <p>
-A beautiful handmade crochet rose bag crafted with premium quality yarn. Lightweight, stylish and perfect for daily use, gifting or special occasions.
-</p>
-
-               <button class="btn add-to-cart"
-data-name="Crochet Rose Bag"
-data-price="2499">
-Add to Cart
-</button>
-            </div>
-
-            <div class="product-card">
-
-                <img src="images/sunflower-bouquet.png" class="product-image" alt="Sunflower">
-
-                <h3>Sunflower Bouquet</h3>
-
-                <p class="price">Rs. 499</p>
-
-                <p>
-A forever blooming crochet sunflower bouquet made with soft yarn. A thoughtful handmade gift that never fades and adds charm to any space.
-</p>
-
-               <button class="btn add-to-cart"
-data-name="Sunflower Bouquet"
-data-price="499">
-Add to Cart
-</button>
-
-            </div>
-
-            <div class="product-card">
-
-                <img src="images/mini-rose-bouquet.png" class="product-image" alt="Mini Rose">
-
-                <h3>Mini Rose Bouquet</h3>
-
-                <p class="price">Rs. 699</p>
-
-                <p>
-A cute crochet mini rose bouquet keychain, handcrafted with love. Perfect for gifting, bags, keys and memorable keepsakes.
-</p>
-
-                <button class="btn add-to-cart"
-data-name="Mini Rose Bouquet"
-data-price="699">
-Add to Cart
-</button>
-
-            </div>
+            <button class="btn add-to-cart"
+                data-name="Crochet Rose Bag"
+                data-price="2499">
+                Add to Cart
+            </button>
 
         </div>
 
-    </section>
+        <div class="product-card">
+
+            <img src="images/sunflower-bouquet.png" alt="Sunflower Bouquet" class="product-image">
+
+            <h3>Sunflower Bouquet</h3>
+
+            <p class="price">Rs. 499</p>
+
+            <p>
+                A forever blooming crochet sunflower bouquet made with soft yarn.
+                A thoughtful handmade gift that never fades.
+            </p>
+
+            <button class="btn add-to-cart"
+                data-name="Sunflower Bouquet"
+                data-price="499">
+                Add to Cart
+            </button>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/mini-rose-bouquet.png" alt="Mini Rose Bouquet" class="product-image">
+
+            <h3>Mini Rose Bouquet</h3>
+
+            <p class="price">Rs. 699</p>
+
+            <p>
+                A cute crochet mini rose bouquet keychain,
+                handcrafted with love and perfect for gifting.
+            </p>
+
+            <button class="btn add-to-cart"
+                data-name="Mini Rose Bouquet"
+                data-price="699">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
 <script src="js/script.js"></script>
-</body>
 
+</body>
 </html>
