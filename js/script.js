@@ -35,3 +35,72 @@ buttons.forEach(button => {
     });
 
 });
+// ===========================
+// SHOW PRODUCTS ON CART PAGE
+// ===========================
+
+const cartItems = document.getElementById("cart-items");
+
+if (cartItems) {
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML = "<h2>Your cart is empty.</h2>";
+
+    } else {
+
+        let total = 0;
+        let html = "";
+
+        cart.forEach((product, index) => {
+
+            total += product.price;
+
+            html += `
+                <div class="cart-item">
+
+                    <h3>${product.name}</h3>
+
+                    <p>Price: Rs. ${product.price}</p>
+
+                    <button class="btn remove-btn" data-index="${index}">
+                        Remove
+                    </button>
+
+                </div>
+            `;
+
+        });
+
+        html += `
+            <h2>Total: Rs. ${total}</h2>
+
+            <a href="#" class="btn" id="checkout-btn">
+                Checkout on WhatsApp
+            </a>
+        `;
+
+        cartItems.innerHTML = html;
+
+    }
+
+}
+// ===========================
+// REMOVE ITEM
+// ===========================
+
+document.addEventListener("click", function(e){
+
+    if(e.target.classList.contains("remove-btn")){
+
+        const index = e.target.dataset.index;
+
+        cart.splice(index,1);
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        location.reload();
+
+    }
+
+});
