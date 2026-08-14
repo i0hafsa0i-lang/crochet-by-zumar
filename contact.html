@@ -1,60 +1,278 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Crochet by Zumar</title>
-    <link rel="stylesheet" href="style.css">
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Crochet by Zumar</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
+
 <body>
 
+```
+<!-- Navigation -->
+
 <nav>
+
     <div class="logo">
-        <img src="images/logo.png" alt="Crochet by Zumar Logo">
-        <span>Crochet by Zumar</span>
+
+        <img
+            src="images/logo.png"
+            alt="Crochet by Zumar Logo"
+        >
+
+        <span>
+            Crochet by Zumar
+        </span>
+
     </div>
+
+
     <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="contact.html">Contact</a></li>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="shop.html">
+                Shop
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="support.html">
+                Support
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
     </ul>
-    <a href="https://wa.me/923244691920" class="btn">Order</a>
+
+
+    <div class="nav-buttons">
+
+        <a
+            href="cart.html"
+            class="cart-btn"
+        >
+            🛒 Cart
+            (<span id="cart-count">0</span>)
+        </a>
+
+        <a
+            href="https://wa.me/923244691920"
+            class="btn"
+        >
+            Order
+        </a>
+
+    </div>
+
 </nav>
 
+
+<!-- Contact Hero -->
+
 <section class="contact-hero">
-    <h1>Let's Create Something Beautiful Together ✨</h1>
+
+    <h1>
+        Let's Create Something Beautiful Together
+    </h1>
+
     <p>
-        Have a question, want a custom order, or just want to say hello?
+        Have a question, want a custom order,
+        or just want to say hello?
         I'd love to hear from you.
     </p>
+
 </section>
+
+
+<!-- Contact Information -->
 
 <section class="contact-container">
+
+
     <div class="contact-card">
-        <h2>Contact Information</h2>
-        <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/923244691920">0324-4691920</a></p>
-        <p><strong>📷 Instagram:</strong> <a href="https://instagram.com/cbz.pk" target="_blank">@cbz.pk</a></p>
-        <p><strong>📧 Email:</strong> <a href="mailto:crochetzumar@gmail.com">crochetzumar@gmail.com</a></p>
-        <p><strong>📍 Location:</strong> Pakistan</p>
+
+        <h2>
+            Contact Information
+        </h2>
+
+        <p>
+            <strong>WhatsApp:</strong>
+            <a
+                href="https://wa.me/923244691920"
+                target="_blank"
+            >
+                0324-4691920
+            </a>
+        </p>
+
+
+        <p>
+            <strong>Instagram:</strong>
+            <a
+                href="https://instagram.com/cbz.pk"
+                target="_blank"
+            >
+                @cbz.pk
+            </a>
+        </p>
+
+
+        <p>
+            <strong>Email:</strong>
+            <a
+                href="mailto:crochetzumar@gmail.com"
+            >
+                crochetzumar@gmail.com
+            </a>
+        </p>
+
+
+        <p>
+            <strong>Location:</strong>
+            Pakistan
+        </p>
+
+
+        <a
+            href="https://wa.me/923244691920"
+            class="btn"
+            target="_blank"
+        >
+            Chat on WhatsApp
+        </a>
+
     </div>
+
+
+    <!-- Message Form -->
+
     <div class="contact-card">
-        <h2>Send a Message</h2>
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button class="btn" type="submit">Send Message</button>
+
+        <h2>
+            Send a Message
+        </h2>
+
+        <form
+            action="mailto:crochetzumar@gmail.com"
+            method="post"
+            enctype="text/plain"
+        >
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+            >
+
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+            >
+
+
+            <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+
+            <button
+                class="btn"
+                type="submit"
+            >
+                Send Message
+            </button>
+
         </form>
+
     </div>
+
+
 </section>
 
+
+<!-- Custom Orders -->
+
+<section class="thank-you">
+
+    <h2>
+        Looking for Something Custom?
+    </h2>
+
+    <p>
+        Tell me what you have in mind — your preferred
+        colors, style, size, or occasion — and I'll be
+        happy to discuss a custom crochet creation with you.
+    </p>
+
+
+    <a
+        href="https://wa.me/923244691920?text=Hi!%20I%27d%20like%20to%20discuss%20a%20custom%20crochet%20order."
+        class="btn"
+        target="_blank"
+    >
+        Request Custom Order
+    </a>
+
+</section>
+
+
+<!-- Footer -->
+
 <footer>
-    <h3>Crochet by Zumar</h3>
-    <p>Handmade with Love • Made to Last</p>
-    <p>&copy; 2026 Crochet by Zumar. All Rights Reserved.</p>
+
+    <h3>
+        Crochet by Zumar
+    </h3>
+
+    <p>
+        Handmade with Love • Made to Last
+    </p>
+
+    <p>
+        &copy; 2026 Crochet by Zumar.
+        All Rights Reserved.
+    </p>
+
 </footer>
+
+
+<!-- JavaScript -->
+
 <script src="js/script.js"></script>
+```
+
 </body>
+
 </html>
