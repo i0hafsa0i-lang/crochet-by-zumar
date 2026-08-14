@@ -174,19 +174,28 @@ header p {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
+    align-items: stretch;
 }
 
 .category-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
     background: white;
-    padding: 35px;
+    padding: 35px 25px;
+    min-height: 190px;
+
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
     transition: 0.3s;
     text-decoration: none;
     color: inherit;
+    text-align: center;
 }
 
 .category-card:hover {
@@ -194,14 +203,21 @@ header p {
 }
 
 .category-card h3 {
+    width: 100%;
+    min-height: 34px;
+
     font-size: 28px;
     color: #7b2d26;
     margin-bottom: 15px;
 }
 
 .category-card p {
+    width: 100%;
+    min-height: 52px;
+
     color: #666;
     line-height: 1.6;
+    margin: 0;
 }
 
 
