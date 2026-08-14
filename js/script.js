@@ -36,7 +36,10 @@ function updateCartCount() {
 // UNIVERSAL PRODUCT OPTION READER
 // Works for: dropdown only, text only, dropdown + custom text
 // This is the ONLY place option-reading logic lives, so it
-// automatically works for every current AND future product card.
+// automatically works for every current AND future product card
+// (EXCEPT Phone Cases, which is handled separately below because
+// it needs 3 pieces of info instead of 1).
+// This function is untouched / original — do not edit it.
 // ===========================
 
 function getProductOption(productCard) {
@@ -48,11 +51,11 @@ function getProductOption(productCard) {
         productCard.querySelector('input[type="text"].product-option');
 
     // ---- DROPDOWN PRESENT ----
+
     if (selectOption) {
 
         const selectedValue = selectOption.value.trim();
 
-        // Case-insensitive so "custom" / "Custom" / "CUSTOM" all work
         const isCustomChoice =
             selectedValue.toLowerCase() === "custom";
 
@@ -72,11 +75,11 @@ function getProductOption(productCard) {
             };
         }
 
-        // Normal dropdown selection (e.g. "Red")
         return { option: selectedValue, error: null };
     }
 
     // ---- TEXT INPUT ONLY (no dropdown at all) ----
+
     if (textOption) {
 
         const typedValue = textOption.value.trim();
@@ -93,6 +96,7 @@ function getProductOption(productCard) {
     }
 
     // ---- NO OPTION FIELD ON THIS PRODUCT ----
+
     return { option: "", error: null };
 }
 
@@ -113,15 +117,71 @@ document.addEventListener("click", function (e) {
     const productName = button.dataset.name;
     const productPrice = Number(button.dataset.price);
 
-    const result = getProductOption(productCard);
+    let option = "";
 
-    if (result.error) {
-        alert(result.error);
-        if (result.focusEl) result.focusEl.focus();
-        return;
+    // ===========================
+    // SPECIAL CASE: PHONE CASES ONLY
+    // Detected by the .phonecase-style class, which no other
+    // product uses. Every other product falls through to the
+    // untouched universal getProductOption() below.
+    // ===========================
+
+    const phonecaseStyle =
+        productCard.querySelector(".phonecase-style");
+
+    if (phonecaseStyle) {
+
+        const designValue = phonecaseStyle.value.trim();
+
+        const mobileNameInput =
+            productCard.querySelector(".phonecase-mobile-name");
+
+        const mobileVersionInput =
+            productCard.querySelector(".phonecase-mobile-version");
+
+        const mobileName =
+            mobileNameInput ? mobileNameInput.value.trim() : "";
+
+        const mobileVersion =
+            mobileVersionInput ? mobileVersionInput.value.trim() : "";
+
+        if (!designValue) {
+            alert("Please choose a case design.");
+            phonecaseStyle.focus();
+            return;
+        }
+
+        if (!mobileName) {
+            alert("Please enter your mobile name.");
+            mobileNameInput.focus();
+            return;
+        }
+
+        if (!mobileVersion) {
+            alert("Please enter your mobile version.");
+            mobileVersionInput.focus();
+            return;
+        }
+
+        option =
+            designValue + " | Mobile: " + mobileName + " " + mobileVersion;
+
+    } else {
+
+        // ===========================
+        // EVERY OTHER PRODUCT: unchanged universal system
+        // ===========================
+
+        const result = getProductOption(productCard);
+
+        if (result.error) {
+            alert(result.error);
+            if (result.focusEl) result.focusEl.focus();
+            return;
+        }
+
+        option = result.option;
     }
-
-    const option = result.option;
 
     // ===========================
     // CHECK EXISTING PRODUCT
